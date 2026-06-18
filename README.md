@@ -1,6 +1,6 @@
 # GPU VRAM Monitor
 
-A Windows desktop app that shows per-process GPU dedicated VRAM usage in real time. Fills a gap — no good per-process VRAM tools exist for AMD GPUs on Windows.
+A Windows desktop app that shows per-process GPU dedicated VRAM usage in real time. Fills a gap - no good per-process VRAM tools exist for AMD GPUs on Windows.
 
 ## What it does
 
@@ -16,7 +16,7 @@ A Windows desktop app that shows per-process GPU dedicated VRAM usage in real ti
 
 Reads `\GPU Process Memory(*)\Dedicated Usage` and `\GPU Adapter Memory(*)\Dedicated Usage` performance counters. Parses instance names like `luid_..._phys_0_pid_1234` to extract PIDs, then resolves process names. Total VRAM capacity detected via registry (`HardwareInformation.qwMemorySize`) with WMI and GPU-name fallbacks.
 
-**Known limitation:** Per-process VRAM values are overestimated on Windows (Microsoft bug — cross-process shared memory is double-counted). The relative ordering is still useful. The adapter-level total is accurate.
+**Known limitation:** Per-process VRAM values are overestimated on Windows (Microsoft bug - cross-process shared memory is double-counted). The relative ordering is still useful. The adapter-level total is accurate.
 
 ## Tech stack
 
